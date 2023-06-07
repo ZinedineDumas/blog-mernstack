@@ -1,7 +1,6 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import React, { useState } from "react";
 
 export const Register = () => {
   const [name, setname] = useState("");

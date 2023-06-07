@@ -31,8 +31,8 @@ export function Blog() {
   }
   const Update_oper = (key: number) => {
     setKey(key);
-    let fnew = { url, title, text, like, watch }
-    blogs[key] = fnew;
+    let status_new = { url, title, text, like, watch }
+    blogs[key] = status_new;
     console.log(blogs[key]);
     localStorage.setItem('blog', JSON.stringify(blogs));
     navigate("/dashboard");
@@ -40,8 +40,8 @@ export function Blog() {
   }
   const Like = (key: number) => {
     setlike(like + 1);
-    let a = sessionStorage.getItem('username');
-    if (a) {
+    let user_name = sessionStorage.getItem('username');
+    if (user_name) {
       setlike(1);
       return;
     } else {
@@ -133,9 +133,7 @@ export function Blog() {
               className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
             >
               <div className="relative w-auto my-6 mx-auto max-w-3xl">
-                {/*content*/}
                 <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-                  {/*header*/}
                   <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
                     <h1 className="text-3xl font-semibold text-center text-purple-700  uppercase ">
                       Modify the Detail
@@ -149,7 +147,6 @@ export function Blog() {
                       </span>
                     </button>
                   </div>
-                  {/*body*/}
                   <div>
                     <img
                       alt="blog photo"
@@ -192,7 +189,6 @@ export function Blog() {
                       </div>
                     </div>
                   </div>
-                  {/*footer*/}
                   <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
                     <button
                       className="bg-blue-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button"
@@ -208,9 +204,7 @@ export function Blog() {
                           className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
                         >
                           <div className="relative w-auto my-6 mx-auto max-w-3xl">
-                            {/*content*/}
                             <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-                              {/*header*/}
                               <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
                                 <h3 className="text-3xl font-semibold">
                                   Update the Blog
@@ -224,7 +218,6 @@ export function Blog() {
                                   </span>
                                 </button>
                               </div>
-                              {/*body*/}
                               <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl shadow-rose-600/40 ring-2 lg:max-w-xl">
                                 <form className="mt-6" action="/dashboard">
                                   <div className="mb-2">
@@ -239,7 +232,6 @@ export function Blog() {
                                         value={title}
                                         key={key}
                                         onChange={(e) => settitle(e.target.value)}
-
                                       />
                                     </label>
                                   </div>
@@ -273,14 +265,12 @@ export function Blog() {
                                   </div>
                                 </form>
                               </div>
-                              {/*footer*/}
                               <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
                                 <button
                                   className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                   type="button"
                                   onClick={() => setEditShow(false)}
                                 >
-
                                   <Link to="/dashboard">Close</Link>
                                 </button>
                                 <button
@@ -307,7 +297,6 @@ export function Blog() {
                                 >
                                   Save Changes
                                 </button>
-
                               </div>
                             </div>
                           </div>
