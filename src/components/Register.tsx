@@ -5,7 +5,6 @@ import { useState } from "react";
 
 export const Register = () => {
   const [name, setname] = useState("");
-  const [id, setId] = useState("");
   const [email, setemail] = useState("");
   const [password1, setpassword1] = useState("");
   const [password2, setpassword2] = useState("");
@@ -84,7 +83,6 @@ export const Register = () => {
                 required
               />
             </div>
-            <a href="#" className="text-xs text-purple-600 hover:underline"></a>
             <div className="mt-6">
               <button
                 onClick={Submit}

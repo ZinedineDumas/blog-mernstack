@@ -12,7 +12,7 @@ export const Login = () => {
       alert("You must register");
     } else {
       let b = JSON.parse(localStorage.getItem(email) as string);
-      if (password != b[1]) {
+      if (password !== b[1]) {
         alert("Wrong password!");
       } else {
         alert("Successfully login!");

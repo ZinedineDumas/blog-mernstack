@@ -7,13 +7,12 @@ export function Blog() {
   const blogs = JSON.parse(localStorage.getItem("blog") as string);
   const [showModal, setShowModal] = useState(false);
   const [showEdit, setEditShow] = useState(false);
-  const [id, setid] = useState("");
   const [url, seturl] = useState("");
   const [title, settitle] = useState("");
   const [text, settext] = useState("");
   const [like, setlike] = useState(0);
   const [watch, setwatch] = useState(0);
-  const [date, setdate] = useState("");
+  const [date] = useState("");
   const [user, setuser] = useState("");
   const navigate = useNavigate();
   const [key, setKey] = useState(0);
