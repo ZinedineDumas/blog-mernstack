@@ -20,3 +20,4 @@ In the project directory, you can run:
    Next , create the blog.
    Next, click the blog to update or like and watch function.
    Can show the detail information of the blog by clicking the
+## Detail
